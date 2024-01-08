@@ -21,6 +21,7 @@ import EditCategory from "./Components/Admin/Screens/EditCategory";
 import AddCategory from "./Components/Admin/Screens/AddCategory";
 import EditProduct from "./Components/Admin/Screens/EditProduct";
 import MasterLayout from "./Components/Admin/MasterLayout";
+import UserDashboard from "./Components/FrontEnd/Screens/UserDashboard";
 
 axios.defaults.baseURL = "http://localhost:8000/";
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
@@ -42,18 +43,19 @@ function App() {
             <Route path="product_detail/:id" element={<ProductDetail />} />
             <Route path="cart" element={<Cart />} />
             <Route path="checkout" element={<CheckOut />} />
+            <Route path="dashboard" element={<UserDashboard />} />
             <Route path="/products" element={<AllProducts />} />
             <Route path="collections/:slug" element={<Slug />} />
-            <Route
+            {/*  <Route
               path="dashboard"
               element={
                 localStorage.getItem("auth_t") ? (
-                  <Navigate to="/" />
+                  <Dashbard />
                 ) : (
-                  <Dashboard />
+                  <Navigate to="/" />
                 )
               }
-            />
+            /> */}
             <Route
               path="login"
               element={
@@ -72,7 +74,7 @@ function App() {
               )
             }
           >
-            <Route index path="dashboard" element={<Dashbard />} />
+            <Route index path="admin_dashboard" element={<Dashbard />} />
             <Route path="add_products" element={<AddProducts />} />
             <Route path="view_products" element={<ViewProducts />} />
             <Route path="add_category" element={<AddCategory />} />

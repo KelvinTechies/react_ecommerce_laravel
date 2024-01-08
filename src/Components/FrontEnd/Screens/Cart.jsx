@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Cart() {
   const [cart, setCart] = useState([]);
@@ -43,9 +44,8 @@ function Cart() {
   }, [navigate, cart]);
 
   if (loading) {
-    return;
-    {
-      /* <div style={{ width: "50%", margin: "auto" }}>
+    return (
+      <div style={{ width: "50%", margin: "auto" }}>
         <ClipLoader
           color="#ccc"
           loading={loading}
@@ -53,11 +53,9 @@ function Cart() {
           aria-label="Loading Spinner"
           data-testid="loader"
         />
-      </div> */
-    }
-    <h1>Loading Cart Products...</h1>;
+      </div>
+    );
   }
-
   var cart_html = "";
   if (cart.length > 0) {
     cart_html = (
@@ -279,8 +277,15 @@ function Cart() {
         <div className="mb-6" />
       </main>
     );
+  } else {
+    cart_html = (
+      <div style={{ width: "50%", margin: "auto", textAlign: "center" }}>
+        <h1>Your Shopping cart in Empty</h1>
+        <NavLink to="/">Go Back Home</NavLink>
+      </div>
+    );
   }
-  return <>{cart_html}</>;
+  return <>{loading ? <h1>Loading Cart Products...</h1> : cart_html}</>;
 }
 
 export default Cart;

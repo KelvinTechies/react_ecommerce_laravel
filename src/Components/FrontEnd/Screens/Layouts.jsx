@@ -707,17 +707,7 @@ function Layouts({ children }) {
                   <NavLink to="/products">Products</NavLink>
                 </li>
               </ul>
-              <ul className="mobile-menu mt-2 mb-2">
-                <li className="border-0">
-                  <NavLink to="#">Special Offer!</NavLink>
-                </li>
-                <li className="border-0">
-                  <NavLink to="#" target="_blank">
-                    Buy Porto!
-                    <span className="tip tip-hot">Hot</span>
-                  </NavLink>
-                </li>
-              </ul>
+
               <ul className="mobile-menu">
                 <li>
                   <NavLink to="dashboard">My Account</NavLink>

@@ -1,15 +1,16 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiHeart, CiLocationOn, CiLogout } from "react-icons/ci";
 import { SlSocialDropbox } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
-function Dashboard() {
-  const [order, setOrder] = useState();
+function UserDashboard() {
+  const [orders, setOrder] = useState([]);
+  const [err, setErr] = useState("");
   const navigate = useNavigate();
   function logOut() {
     /*   localStorage.clear();
-        navigate("/myaccounts");
-        window.location.reload(); */
+          navigate("/myaccounts");
+          window.location.reload(); */
     axios.post("api/logout/").then((res) => {
       if (res.data.status === 200) {
         localStorage.removeItem("auth_t");
@@ -24,23 +25,90 @@ function Dashboard() {
     swal("Warning", "Login to continue viewing your Cart", "error");
   }
 
-  useEffect(() => {
+  const getOrders = () => {
     let isMounted = true;
 
     axios.get("api/order").then((res) => {
       if (isMounted) {
         if (res.data.status === 200) {
           setOrder(res.data.product);
-          console.log(res.data.product);
           setLoading(false);
+        } else if (res.data.status === 404) {
+          setErr(res.data.msg);
         }
       }
     });
-    return () => {
-      isMounted = false;
-    };
-  }, [navigate]);
+  };
 
+  let orderHtml = "";
+  if (orders.length > 0) {
+    orderHtml = (
+      <table className="table table-order text-left">
+        <thead>
+          <tr>
+            <th className="order-id">NAME</th>
+            <th className="order-status">STATUS</th>
+            <th className="order-status">Quantity</th>
+            <th className="order-price">Brand</th>
+            <th className="order-price">Image</th>
+            <th className="order-price">Category</th>
+            <th className="order-date">DATE</th>
+          </tr>
+        </thead>
+        <tbody>
+          {loading ? (
+            <h1>Loading Ordered Products...</h1>
+          ) : (
+            orders.map((order) => {
+              return (
+                <>
+                  <tr>
+                    <td>{order.name}</td>
+                    <td>
+                      <h6 clasName="text-danger"> {"Pending"}</h6>
+                    </td>
+                    <td>{order.qty}</td>
+                    <td>{order.brand}</td>
+                    <td>
+                      <div className="img">
+                        <img
+                          src={`http://localhost:8000/${order.image}`}
+                          alt=""
+                        />
+                      </div>
+                    </td>
+                    <td>{order.category_models.name}</td>
+                    <td>{order.created_at}</td>
+                  </tr>
+                </>
+              );
+            })
+          )}
+        </tbody>
+      </table>
+    );
+  } else {
+    orderHtml = (
+      <table className="table table-order text-left">
+        <tbody>
+          <tr>
+            <td className="text-center p-0" colSpan={5}>
+              <p className="mb-5 mt-5">{err}</p>
+              <hr className="mt-0 mb-3 pb-2" />
+              <a href="category.html" className="btn btn-dark">
+                Go Shop
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  }
+  useEffect(() => {
+    getOrders();
+  }, [navigate, orders]);
+
+  console.log(orders);
   return (
     <>
       <main className="main">
@@ -241,50 +309,12 @@ function Dashboard() {
                     Orders
                   </h3>
                   <div className="order-table-container text-center">
-                    <table className="table table-order text-left">
-                      <thead>
-                        <tr>
-                          <th className="order-id">ORDER</th>
-                          <th className="order-date">DATE</th>
-                          <th className="order-status">STATUS</th>
-                          <th className="order-price">TOTAL</th>
-                          <th className="order-action">ACTIONS</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="text-center p-0" colSpan={5}>
-                            <p className="mb-5 mt-5">
-                              No Order has been made yet.
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <hr className="mt-0 mb-3 pb-2" />
-                    <a href="category.html" className="btn btn-dark">
-                      Go Shop
-                    </a>
+                    {orderHtml}
                   </div>
                 </div>
               </div>
               {/* End .tab-pane */}
-              <div className="tab-pane fade" id="download" role="tabpanel">
-                <div className="download-content">
-                  <h3 className="account-sub-title d-none d-md-block">
-                    <i className="sicon-cloud-download align-middle mr-3" />
-                    Downloads
-                  </h3>
-                  <div className="download-table-container">
-                    <p>No downloads available yet.</p>{" "}
-                    <a
-                      href="category.html"
-                      className="btn btn-primary text-transform-none mb-2"
-                    >
-                      GO SHOP
-                    </a>
-                  </div>
-                </div>
+              
               </div>
               {/* End .tab-pane */}
               <div className="tab-pane fade" id="address" role="tabpanel">
@@ -668,4 +698,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default UserDashboard;
