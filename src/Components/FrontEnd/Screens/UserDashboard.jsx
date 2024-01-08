@@ -314,386 +314,372 @@ function UserDashboard() {
                 </div>
               </div>
               {/* End .tab-pane */}
-              
-              </div>
-              {/* End .tab-pane */}
-              <div className="tab-pane fade" id="address" role="tabpanel">
-                <h3 className="account-sub-title d-none d-md-block mb-1">
-                  <i className="sicon-location-pin align-middle mr-3" />
-                  Addresses
-                </h3>
-                <div className="addresses-content">
-                  <p className="mb-4">
-                    The following addresses will be used on the checkout page by
-                    default.
-                  </p>
-                  <div className="row">
-                    <div className="address col-md-6">
-                      <div className="heading d-flex">
-                        <h4 className="text-dark mb-0">Billing address</h4>
-                      </div>
-                      <div className="address-box">
-                        You have not set up this type of address yet.
-                      </div>
-                      <a
-                        href="#billing"
-                        className="btn btn-default address-action link-to-tab"
-                      >
-                        Add Address
-                      </a>
+            </div>
+            {/* End .tab-pane */}
+            <div className="tab-pane fade" id="address" role="tabpanel">
+              <h3 className="account-sub-title d-none d-md-block mb-1">
+                <i className="sicon-location-pin align-middle mr-3" />
+                Addresses
+              </h3>
+              <div className="addresses-content">
+                <p className="mb-4">
+                  The following addresses will be used on the checkout page by
+                  default.
+                </p>
+                <div className="row">
+                  <div className="address col-md-6">
+                    <div className="heading d-flex">
+                      <h4 className="text-dark mb-0">Billing address</h4>
                     </div>
-                    <div className="address col-md-6 mt-5 mt-md-0">
-                      <div className="heading d-flex">
-                        <h4 className="text-dark mb-0">Shipping address</h4>
-                      </div>
-                      <div className="address-box">
-                        You have not set up this type of address yet.
-                      </div>
-                      <a
-                        href="#shipping"
-                        className="btn btn-default address-action link-to-tab"
-                      >
-                        Add Address
-                      </a>
+                    <div className="address-box">
+                      You have not set up this type of address yet.
                     </div>
+                    <a
+                      href="#billing"
+                      className="btn btn-default address-action link-to-tab"
+                    >
+                      Add Address
+                    </a>
+                  </div>
+                  <div className="address col-md-6 mt-5 mt-md-0">
+                    <div className="heading d-flex">
+                      <h4 className="text-dark mb-0">Shipping address</h4>
+                    </div>
+                    <div className="address-box">
+                      You have not set up this type of address yet.
+                    </div>
+                    <a
+                      href="#shipping"
+                      className="btn btn-default address-action link-to-tab"
+                    >
+                      Add Address
+                    </a>
                   </div>
                 </div>
               </div>
-              {/* End .tab-pane */}
-              <div className="tab-pane fade" id="edit" role="tabpanel">
-                <h3 className="account-sub-title d-none d-md-block mt-0 pt-1 ml-1">
-                  <i className="icon-user-2 align-middle mr-3 pr-1" />
-                  Account Details
-                </h3>
-                <div className="account-content">
-                  <form action="#">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="acc-name">
-                            First name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Editor"
-                            id="acc-name"
-                            name="acc-name"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label htmlFor="acc-lastname">
-                            Last name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="acc-lastname"
-                            name="acc-lastname"
-                            required=""
-                          />
-                        </div>
+            </div>
+            {/* End .tab-pane */}
+            <div className="tab-pane fade" id="edit" role="tabpanel">
+              <h3 className="account-sub-title d-none d-md-block mt-0 pt-1 ml-1">
+                <i className="icon-user-2 align-middle mr-3 pr-1" />
+                Account Details
+              </h3>
+              <div className="account-content">
+                <form action="#">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="acc-name">
+                          First name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Editor"
+                          id="acc-name"
+                          name="acc-name"
+                          required=""
+                        />
                       </div>
                     </div>
-                    <div className="form-group mb-2">
-                      <label htmlFor="acc-text">
-                        Display name <span className="required">*</span>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="acc-lastname">
+                          Last name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="acc-lastname"
+                          name="acc-lastname"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group mb-2">
+                    <label htmlFor="acc-text">
+                      Display name <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="acc-text"
+                      name="acc-text"
+                      placeholder="Editor"
+                      required=""
+                    />
+                    <p>
+                      This will be how your name will be displayed in the
+                      account section and in reviews
+                    </p>
+                  </div>
+                  <div className="form-group mb-4">
+                    <label htmlFor="acc-email">
+                      Email address <span className="required">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="acc-email"
+                      name="acc-email"
+                      placeholder="editor@gmail.com"
+                      required=""
+                    />
+                  </div>
+                  <div className="change-password">
+                    <h3 className="text-uppercase mb-2">Password Change</h3>
+                    <div className="form-group">
+                      <label htmlFor="acc-password">
+                        Current Password (leave blank to leave unchanged)
                       </label>
                       <input
-                        type="text"
+                        type="password"
                         className="form-control"
-                        id="acc-text"
-                        name="acc-text"
-                        placeholder="Editor"
-                        required=""
+                        id="acc-password"
+                        name="acc-password"
                       />
-                      <p>
-                        This will be how your name will be displayed in the
-                        account section and in reviews
-                      </p>
                     </div>
-                    <div className="form-group mb-4">
-                      <label htmlFor="acc-email">
-                        Email address <span className="required">*</span>
+                    <div className="form-group">
+                      <label htmlFor="acc-password">
+                        New Password (leave blank to leave unchanged)
                       </label>
                       <input
-                        type="email"
+                        type="password"
                         className="form-control"
-                        id="acc-email"
-                        name="acc-email"
-                        placeholder="editor@gmail.com"
-                        required=""
+                        id="acc-new-password"
+                        name="acc-new-password"
                       />
                     </div>
-                    <div className="change-password">
-                      <h3 className="text-uppercase mb-2">Password Change</h3>
+                    <div className="form-group">
+                      <label htmlFor="acc-password">Confirm New Password</label>
+                      <input
+                        type="password"
+                        className="form-control"
+                        id="acc-confirm-password"
+                        name="acc-confirm-password"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-footer mt-3 mb-0">
+                    <button type="submit" className="btn btn-dark mr-0">
+                      Save changes
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            {/* End .tab-pane */}
+            <div className="tab-pane fade" id="billing" role="tabpanel">
+              <div className="address account-content mt-0 pt-2">
+                <h4 className="title">Billing address</h4>
+                <form className="mb-2" action="#">
+                  <div className="row">
+                    <div className="col-md-6">
                       <div className="form-group">
-                        <label htmlFor="acc-password">
-                          Current Password (leave blank to leave unchanged)
+                        <label>
+                          First name <span className="required">*</span>
                         </label>
                         <input
-                          type="password"
+                          type="text"
                           className="form-control"
-                          id="acc-password"
-                          name="acc-password"
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="acc-password">
-                          New Password (leave blank to leave unchanged)
-                        </label>
-                        <input
-                          type="password"
-                          className="form-control"
-                          id="acc-new-password"
-                          name="acc-new-password"
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="acc-password">
-                          Confirm New Password
-                        </label>
-                        <input
-                          type="password"
-                          className="form-control"
-                          id="acc-confirm-password"
-                          name="acc-confirm-password"
+                          required=""
                         />
                       </div>
                     </div>
-                    <div className="form-footer mt-3 mb-0">
-                      <button type="submit" className="btn btn-dark mr-0">
-                        Save changes
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>
+                          Last name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label>Company </label>
+                    <input type="text" className="form-control" />
+                  </div>
+                  <div className="select-custom">
+                    <label>
+                      Country / Region <span className="required">*</span>
+                    </label>
+                    <select name="orderby" className="form-control">
+                      <option value="" selected="selected">
+                        British Indian Ocean Territory
+                      </option>
+                      <option value={1}>Brunei</option>
+                      <option value={2}>Bulgaria</option>
+                      <option value={3}>Burkina Faso</option>
+                      <option value={4}>Burundi</option>
+                      <option value={5}>Cameroon</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Street address <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="House number and street name"
+                      required=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Apartment, suite, unit, etc. (optional)"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Town / City <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      State / Country <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Postcode / ZIP <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label>
+                      Phone <span className="required">*</span>
+                    </label>
+                    <input type="number" className="form-control" required="" />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label>
+                      Email address <span className="required">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="editor@gmail.com"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-footer mb-0">
+                    <div className="form-footer-right">
+                      <button type="submit" className="btn btn-dark py-4">
+                        Save Address
                       </button>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
-              {/* End .tab-pane */}
-              <div className="tab-pane fade" id="billing" role="tabpanel">
-                <div className="address account-content mt-0 pt-2">
-                  <h4 className="title">Billing address</h4>
-                  <form className="mb-2" action="#">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label>
-                            First name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label>
-                            Last name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label>Company </label>
-                      <input type="text" className="form-control" />
-                    </div>
-                    <div className="select-custom">
-                      <label>
-                        Country / Region <span className="required">*</span>
-                      </label>
-                      <select name="orderby" className="form-control">
-                        <option value="" selected="selected">
-                          British Indian Ocean Territory
-                        </option>
-                        <option value={1}>Brunei</option>
-                        <option value={2}>Bulgaria</option>
-                        <option value={3}>Burkina Faso</option>
-                        <option value={4}>Burundi</option>
-                        <option value={5}>Cameroon</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Street address <span className="required">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="House number and street name"
-                        required=""
-                      />
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Apartment, suite, unit, etc. (optional)"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Town / City <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        State / Country <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Postcode / ZIP <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-group mb-3">
-                      <label>
-                        Phone <span className="required">*</span>
-                      </label>
-                      <input
-                        type="number"
-                        className="form-control"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group mb-3">
-                      <label>
-                        Email address <span className="required">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        placeholder="editor@gmail.com"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-footer mb-0">
-                      <div className="form-footer-right">
-                        <button type="submit" className="btn btn-dark py-4">
-                          Save Address
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              {/* End .tab-pane */}
-              <div className="tab-pane fade" id="shipping" role="tabpanel">
-                <div className="address account-content mt-0 pt-2">
-                  <h4 className="title mb-3">Shipping Address</h4>
-                  <form className="mb-2" action="#">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label>
-                            First name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label>
-                            Last name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label>Company </label>
-                      <input type="text" className="form-control" />
-                    </div>
-                    <div className="select-custom">
-                      <label>
-                        Country / Region <span className="required">*</span>
-                      </label>
-                      <select name="orderby" className="form-control">
-                        <option value="" selected="selected">
-                          British Indian Ocean Territory
-                        </option>
-                        <option value={1}>Brunei</option>
-                        <option value={2}>Bulgaria</option>
-                        <option value={3}>Burkina Faso</option>
-                        <option value={4}>Burundi</option>
-                        <option value={5}>Cameroon</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Street address <span className="required">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="House number and street name"
-                        required=""
-                      />
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Apartment, suite, unit, etc. (optional)"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Town / City <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        State / Country <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-group">
-                      <label>
-                        Postcode / ZIP <span className="required">*</span>
-                      </label>
-                      <input type="text" className="form-control" required="" />
-                    </div>
-                    <div className="form-footer mb-0">
-                      <div className="form-footer-right">
-                        <button type="submit" className="btn btn-dark py-4">
-                          Save Address
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              {/* End .tab-pane */}
             </div>
-            {/* End .tab-content */}
+            {/* End .tab-pane */}
+            <div className="tab-pane fade" id="shipping" role="tabpanel">
+              <div className="address account-content mt-0 pt-2">
+                <h4 className="title mb-3">Shipping Address</h4>
+                <form className="mb-2" action="#">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>
+                          First name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label>
+                          Last name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label>Company </label>
+                    <input type="text" className="form-control" />
+                  </div>
+                  <div className="select-custom">
+                    <label>
+                      Country / Region <span className="required">*</span>
+                    </label>
+                    <select name="orderby" className="form-control">
+                      <option value="" selected="selected">
+                        British Indian Ocean Territory
+                      </option>
+                      <option value={1}>Brunei</option>
+                      <option value={2}>Bulgaria</option>
+                      <option value={3}>Burkina Faso</option>
+                      <option value={4}>Burundi</option>
+                      <option value={5}>Cameroon</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Street address <span className="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="House number and street name"
+                      required=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Apartment, suite, unit, etc. (optional)"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Town / City <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      State / Country <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Postcode / ZIP <span className="required">*</span>
+                    </label>
+                    <input type="text" className="form-control" required="" />
+                  </div>
+                  <div className="form-footer mb-0">
+                    <div className="form-footer-right">
+                      <button type="submit" className="btn btn-dark py-4">
+                        Save Address
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
         <div className="mb-5" />
-        {/* margin */}
       </main>
-      {/* End .main */}
     </>
   );
 }
