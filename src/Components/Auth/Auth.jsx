@@ -50,9 +50,9 @@ function Auth() {
           localStorage.setItem("auth_t", res.data.token);
           localStorage.setItem("user_info", res.data.user);
           localStorage.setItem("role_play", res.data.role);
-          if (res.data.role === 1) {
-            navigate("/admin");
-          } else if (res.data.role === 0) {
+          if (res.data.role === "1") {
+            navigate("/admin/dashboard");
+          } else {
             navigate("/dashboard");
           }
         } else if (res.data.status === 401) {

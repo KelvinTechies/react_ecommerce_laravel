@@ -5,6 +5,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 import LazyLoad from "react-lazy-load";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Products({ name, slug, id, img, selling_price, original_price, qty }) {
   return (
@@ -24,15 +26,19 @@ function Products({ name, slug, id, img, selling_price, original_price, qty }) {
       >
         <figure>
           <NavLink to={`product_detail/${id}`}>
-            <LazyLoad ef key={img}>
-              <div className="imgbx">
-                <img
+            <div className="imgbx">
+              {/* <img
                   loading="lazy"
-                  src={`http://localhost:8000/${img}`}
+                  
                   alt="product"
-                />
-              </div>
-            </LazyLoad>
+                /> */}
+              <LazyLoadImage
+                effect="blur"
+                src={`http://localhost:8000/${img}`}
+                key={img}
+                placeholderSrc="assets/images/products/product-1-2.jpg"
+              />
+            </div>
             <img src={`http://localhost:8000/${img}`} alt="product" />
           </NavLink>
           <div className="label-group">

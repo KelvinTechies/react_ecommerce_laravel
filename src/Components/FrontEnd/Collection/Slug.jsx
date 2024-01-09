@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Products from "../Screens/Products";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Slug() {
   const [loading, setLoading] = useState(true);
@@ -190,31 +192,29 @@ function Slug() {
                 {category.map((category) => {
                   return (
                     <>
-                      {/* {
-                  <Products
-                    id={product.id}
-                    name={product.name}
-                    slug={product.slug}
-                    selling_price={product.selling_price}
-                    original_price={product.original_price}
-                    qty={product.qty}
-                    img={product.image}
-                  />
-
-
-
-                } */}
-
+                      {" "}
                       <div className="col-6 col-sm-4">
                         <div className="product-default">
                           <figure>
                             <a href="">
-                              <img
+                              <div className="imgbx">
+                                <LazyLoadImage
+                                  effect="blur"
+                                  src={`http://localhost:8000/${category.image}`}
+                                  key={category.image}
+                                  placeholderSrc="assets/images/products/product-1-2.jpg"
+                                />
+                              </div>
+                              {/* <LazyLoadImage
+              effect="blur"
+              src={`http://localhost:8000/${category.image}`}
+              key={image}/> */}
+                              {/* <img
                                 src={`http://localhost:8000/${category.image}`}
                                 alt="product"
                                 width={280}
                                 height={280}
-                              />
+                              /> */}
                               <img
                                 src={`http://localhost:8000/${category.image}`}
                                 alt="product"
