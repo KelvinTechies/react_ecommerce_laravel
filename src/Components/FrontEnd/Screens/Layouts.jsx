@@ -175,7 +175,7 @@ function Layouts({ children }) {
                     src="assets/images/n_store-removebg-preview.png"
                     width={111}
                     height={44}
-                    alt="Porto Logo"
+                    alt="NStore Logo"
                   />
                 </NavLink>
               </div>
@@ -814,7 +814,7 @@ function Layouts({ children }) {
             />
             <h2>Subscribe to newsletter</h2>
             <p>
-              Subscribe to the Porto mailing list to receive updates on new
+              Subscribe to the NStore mailing list to receive updates on new
               arrivals, special offers and our promotions.
             </p>
             <form action="#">

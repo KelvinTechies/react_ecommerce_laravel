@@ -46,16 +46,7 @@ function App() {
             <Route path="dashboard" element={<UserDashboard />} />
             <Route path="/products" element={<AllProducts />} />
             <Route path="collections/:slug" element={<Slug />} />
-            {/*  <Route
-              path="dashboard"
-              element={
-                localStorage.getItem("auth_t") ? (
-                  <Dashbard />
-                ) : (
-                  <Navigate to="/" />
-                )
-              }
-            /> */}
+
             <Route
               path="login"
               element={
@@ -64,16 +55,7 @@ function App() {
             />
           </Route>
 
-          <Route
-            path="/admin"
-            element={
-              localStorage.getItem("role_play") ? (
-                <MasterLayout />
-              ) : (
-                <Navigate to="/" />
-              )
-            }
-          >
+          <Route path="/admin" element={<MasterLayout />}>
             <Route index path="admin_dashboard" element={<Dashbard />} />
             <Route path="add_products" element={<AddProducts />} />
             <Route path="view_products" element={<ViewProducts />} />

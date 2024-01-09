@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Products from "./Products";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function AllProducts() {
   const [loading, setLoading] = useState(true);
@@ -195,33 +197,24 @@ function AllProducts() {
                 {products.map((product) => {
                   return (
                     <>
-                      {/* {
-                      <Products
-                        id={product.id}
-                        name={product.name}
-                        slug={product.slug}
-                        selling_price={product.selling_price}
-                        original_price={product.original_price}
-                        qty={product.qty}
-                        img={product.image}
-                      />
-
-
-
-                    } */}
-
-                      <NavLink to={`product_detail/${product.id}`}>
-                        <div className="col-6 col-sm-4">
+                      <div className="col-6 col-sm-4">
+                        <NavLink to={`product_detail/${product.id}`}>
                           <div className="product-default">
                             <figure>
                               <NavLink to="">
                                 <div className="imgbx">
-                                  <img
+                                  <LazyLoadImage
+                                    effect="blur"
+                                    src={`http://localhost:8000/${product.image}`}
+                                    key={product.image}
+                                    placeholderSrc="assets/images/products/product-1-2.jpg"
+                                  />
+                                  {/* <img
                                     src={`http://localhost:8000/${product.image}`}
                                     alt="product"
                                     width={280}
                                     height={280}
-                                  />
+                                  /> */}
                                 </div>
                                 <img
                                   src={`http://localhost:8000/${product.image}`}
@@ -296,8 +289,8 @@ function AllProducts() {
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </NavLink>
+                        </NavLink>
+                      </div>
                     </>
                   );
                 })}

@@ -1,5 +1,7 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { NavLink } from "react-router-dom";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Category({ name, slug, id, img }) {
   return (
@@ -7,11 +9,18 @@ function Category({ name, slug, id, img }) {
       <NavLink to={`collections/${slug}`}>
         <figure>
           <div className="imgbx">
-            <img
+            {/* <img
               src={`http://localhost:8000/${img}`}
               alt="category"
               width="100%"
               height="100%"
+            /> */}
+
+            <LazyLoadImage
+              effect="blur"
+              src={`http://localhost:8000/${img}`}
+              key={img}
+              placeholderSrc="assets/images/products/product-1-2.jpg"
             />
           </div>
         </figure>

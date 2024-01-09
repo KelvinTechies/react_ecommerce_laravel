@@ -237,7 +237,7 @@ function Home() {
                 />
               </figure>
               <div className="banner-layer">
-                <h3 className="m-b-2">Porto Watches</h3>
+                <h3 className="m-b-2">NStore Watches</h3>
                 <h4 className="m-b-3 text-primary">
                   <sup className="text-dark">
                     <del>20%</del>
@@ -310,340 +310,7 @@ function Home() {
         </div>
       </div>
       {/* End .container */}
-      <section className="featured-products-section">
-        <div className="container">
-          <h2 className="section-title heading-border ls-20 border-0">
-            Featured Products
-          </h2>
-          <div
-            className="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center"
-            data-owl-options="{
-						'dots': false,
-						'nav': true
-					}"
-          >
-            <div
-              className="product-default appear-animate"
-              data-animation-name="fadeInRightShorter"
-            >
-              <figure>
-                <a href="">
-                  <img
-                    src="assets/images/products/product-1.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                  <img
-                    src="assets/images/products/product-1-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                </a>
-                <div className="label-group">
-                  <div className="product-label label-hot">HOT</div>
-                  <div className="product-label label-sale">-20%</div>
-                </div>
-              </figure>
-              <div className="product-details">
-                <div className="category-list">
-                  <a href="#" className="product-category">
-                    Category
-                  </a>
-                </div>
-                <h3 className="product-title">
-                  <a href="">Ultimate 3D Bluetooth Speaker</a>
-                </h3>
-                <div className="ratings-container">
-                  <div className="product-ratings">
-                    <span className="ratings" style={{ width: "80%" }} />
-                    {/* End .ratings */}
-                    <span className="tooltiptext tooltip-top" />
-                  </div>
-                  {/* End .product-ratings */}
-                </div>
-                {/* End .product-container */}
-                <div className="price-box">
-                  <del className="old-price">$59.00</del>
-                  <span className="product-price">$49.00</span>
-                </div>
-                {/* End .price-box */}
-                <div className="product-action">
-                  <a
-                    href="wishlist.html"
-                    className="btn-icon-wish"
-                    title="wishlist"
-                  >
-                    <i className="icon-heart" />
-                  </a>
-                  <a href="" className="btn-icon btn-add-cart">
-                    <i className="fa fa-arrow-right" />
-                    <span>SELECT OPTIONS</span>
-                  </a>
-                  <a href="#" className="btn-quickview" title="Quick View">
-                    <i className="fas fa-external-link-alt" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="product-default appear-animate"
-              data-animation-name="fadeInRightShorter"
-            >
-              <figure>
-                <a href="">
-                  <img
-                    src="assets/images/products/product-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                  <img
-                    src="assets/images/products/product-2-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                </a>
-                <div className="label-group">
-                  <div className="product-label label-hot">HOT</div>
-                  <div className="product-label label-sale">-30%</div>
-                </div>
-              </figure>
-              <div className="product-details">
-                <div className="category-list">
-                  <a href="#" className="product-category">
-                    Category
-                  </a>
-                </div>
-                <h3 className="product-title">
-                  <a href="">Brown Women Casual HandBag</a>
-                </h3>
-                <div className="ratings-container">
-                  <div className="product-ratings">
-                    <span className="ratings" style={{ width: "80%" }} />
-                    {/* End .ratings */}
-                    <span className="tooltiptext tooltip-top" />
-                  </div>
-                  {/* End .product-ratings */}
-                </div>
-                {/* End .product-container */}
-                <div className="price-box">
-                  <del className="old-price">$59.00</del>
-                  <span className="product-price">$49.00</span>
-                </div>
-                {/* End .price-box */}
-                <div className="product-action">
-                  <a href="#" className="btn-icon-wish" title="wishlist">
-                    <i className="icon-heart" />
-                  </a>
-                  <a href="" className="btn-icon btn-add-cart">
-                    <i className="fa fa-arrow-right" />
-                    <span>SELECT OPTIONS</span>
-                  </a>
-                  <a href="#" className="btn-quickview" title="Quick View">
-                    <i className="fas fa-external-link-alt" />
-                  </a>
-                </div>
-              </div>
-              {/* End .product-details */}
-            </div>
-            <div
-              className="product-default appear-animate"
-              data-animation-name="fadeInRightShorter"
-            >
-              <figure>
-                <a href="">
-                  <img
-                    src="assets/images/products/product-3.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                  <img
-                    src="assets/images/products/product-3-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                </a>
-              </figure>
-              <div className="product-details">
-                <div className="category-list">
-                  <a href="#" className="product-category">
-                    Category
-                  </a>
-                </div>
-                <h3 className="product-title">
-                  <a href="">Circled Ultimate 3D Speaker</a>
-                </h3>
-                <div className="ratings-container">
-                  <div className="product-ratings">
-                    <span className="ratings" style={{ width: "80%" }} />
-                    {/* End .ratings */}
-                    <span className="tooltiptext tooltip-top" />
-                  </div>
-                  {/* End .product-ratings */}
-                </div>
-                {/* End .product-container */}
-                <div className="price-box">
-                  <del className="old-price">$59.00</del>
-                  <span className="product-price">$49.00</span>
-                </div>
-                {/* End .price-box */}
-                <div className="product-action">
-                  <a href="#" className="btn-icon-wish" title="wishlist">
-                    <i className="icon-heart" />
-                  </a>
-                  <a
-                    href="#"
-                    className="btn-icon btn-add-cart product-type-simple"
-                  >
-                    <i className="icon-shopping-cart" />
-                    <span>ADD TO CART</span>
-                  </a>
-                  <a href="#" className="btn-quickview" title="Quick View">
-                    <i className="fas fa-external-link-alt" />
-                  </a>
-                </div>
-              </div>
-              {/* End .product-details */}
-            </div>
-            <div
-              className="product-default appear-animate"
-              data-animation-name="fadeInRightShorter"
-            >
-              <figure>
-                <a href="">
-                  <img
-                    src="assets/images/products/product-4.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                  <img
-                    src="assets/images/products/product-4-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                </a>
-                <div className="label-group">
-                  <div className="product-label label-hot">HOT</div>
-                  <div className="product-label label-sale">-40%</div>
-                </div>
-              </figure>
-              <div className="product-details">
-                <div className="category-list">
-                  <a href="#" className="product-category">
-                    Category
-                  </a>
-                </div>
-                <h3 className="product-title">
-                  <a href="">Blue Backpack for the Young - S</a>
-                </h3>
-                <div className="ratings-container">
-                  <div className="product-ratings">
-                    <span className="ratings" style={{ width: "80%" }} />
-                    {/* End .ratings */}
-                    <span className="tooltiptext tooltip-top" />
-                  </div>
-                  {/* End .product-ratings */}
-                </div>
-                {/* End .product-container */}
-                <div className="price-box">
-                  <del className="old-price">$59.00</del>
-                  <span className="product-price">$49.00</span>
-                </div>
-                {/* End .price-box */}
-                <div className="product-action">
-                  <a href="#" className="btn-icon-wish" title="wishlist">
-                    <i className="icon-heart" />
-                  </a>
-                  <a
-                    href="#"
-                    className="btn-icon btn-add-cart product-type-simple"
-                  >
-                    <i className="icon-shopping-cart" />
-                    <span>ADD TO CART</span>
-                  </a>
-                  <a href="#" className="btn-quickview" title="Quick View">
-                    <i className="fas fa-external-link-alt" />
-                  </a>
-                </div>
-              </div>
-              {/* End .product-details */}
-            </div>
-            <div
-              className="product-default appear-animate"
-              data-animation-name="fadeInRightShorter"
-            >
-              <figure>
-                <a href="">
-                  <img
-                    src="assets/images/products/product-5.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                  <img
-                    src="assets/images/products/product-5-2.jpg"
-                    width={280}
-                    height={280}
-                    alt="product"
-                  />
-                </a>
-                <div className="label-group">
-                  <div className="product-label label-hot">HOT</div>
-                  <div className="product-label label-sale">-15%</div>
-                </div>
-              </figure>
-              <div className="product-details">
-                <div className="category-list">
-                  <a href="#" className="product-category">
-                    Category
-                  </a>
-                </div>
-                <h3 className="product-title">
-                  <a href="">Casual Spring Blue Shoes</a>
-                </h3>
-                <div className="ratings-container">
-                  <div className="product-ratings">
-                    <span className="ratings" style={{ width: "80%" }} />
-                    {/* End .ratings */}
-                    <span className="tooltiptext tooltip-top" />
-                  </div>
-                  {/* End .product-ratings */}
-                </div>
-                {/* End .product-container */}
-                <div className="price-box">
-                  <del className="old-price">$59.00</del>
-                  <span className="product-price">$49.00</span>
-                </div>
-                {/* End .price-box */}
-                <div className="product-action">
-                  <a href="#" className="btn-icon-wish" title="wishlist">
-                    <i className="icon-heart" />
-                  </a>
-                  <a
-                    href="#"
-                    className="btn-icon btn-add-cart product-type-simple"
-                  >
-                    <i className="icon-shopping-cart" />
-                    <span>ADD TO CART</span>
-                  </a>
-                  <a href="#" className="btn-quickview" title="Quick View">
-                    <i className="fas fa-external-link-alt" />
-                  </a>
-                </div>
-              </div>
-              {/* End .product-details */}
-            </div>
-          </div>
-          {/* End .featured-proucts */}
-        </div>
-      </section>
+
       <section className="new-products-section">
         <div className="container">
           <h2 className="section-title heading-border ls-20 border-0">
@@ -958,7 +625,7 @@ function Home() {
                   <h5>You Won't Be Alone</h5>
                   <p>
                     We really care about you and your website as much as you do.
-                    Purchasing Porto or any other theme from us you get 100%
+                    Purchasing NStore or any other theme from us you get 100%
                     free support.
                   </p>
                 </div>
@@ -976,7 +643,7 @@ function Home() {
                   <h3>Fully Customizable</h3>
                   <h5>Tons Of Options</h5>
                   <p>
-                    With Porto you can customize the layout, colors and styles
+                    With NStore you can customize the layout, colors and styles
                     within only a few minutes. Start creating an amazing website
                     right now!
                   </p>
@@ -995,7 +662,7 @@ function Home() {
                   <h3>Powerful Admin</h3>
                   <h5>Made To Help You</h5>
                   <p>
-                    Porto has very powerful admin features to help customer to
+                    NStore has very powerful admin features to help customer to
                     build their own shop in minutes without any special skills
                     in web development.
                   </p>

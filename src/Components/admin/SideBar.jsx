@@ -1,18 +1,18 @@
+import axios from "axios";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-function logOut() {
-  /*   localStorage.clear();
-      navigate("/myaccounts");
-      window.location.reload(); */
-  axios.post("api/logout/").then((res) => {
-    if (res.data.status === 200) {
-      localStorage.removeItem("auth_t");
-      localStorage.removeItem("user_info");
-      navigate("/login");
-    }
-  });
-}
+import { Link, NavLink, useNavigate } from "react-router-dom";
+
 function SideBar() {
+  const navigate = useNavigate();
+  function logOut() {
+    axios.post("api/logout/").then((res) => {
+      if (res.data.status === 200) {
+        localStorage.removeItem("auth_t");
+        localStorage.removeItem("user_info");
+        navigate("/login");
+      }
+    });
+  }
   return (
     <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
       <div className="sb-sidenav-menu">
@@ -79,7 +79,7 @@ function SideBar() {
           </NavLink>
 
           <div className="sb-sidenav-menu-heading">Addons</div>
-          <NavLink className="nav-link" to="#" onClick={logout}>
+          <NavLink className="nav-link" to="#" onClick={logOut}>
             <div className="sb-nav-link-icon">
               <i className="fas fa-chart-area" />
             </div>
